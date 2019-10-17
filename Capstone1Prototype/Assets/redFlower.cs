@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flower : MonoBehaviour
+public class redFlower : MonoBehaviour
 {
     public GameObject body;
     public float speed;
