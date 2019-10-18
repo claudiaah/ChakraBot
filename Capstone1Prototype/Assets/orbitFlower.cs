@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class redFlower : MonoBehaviour
+public class orbitFlower : MonoBehaviour
 {
     public GameObject body;
-    public float speed;
+    float speed;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        speed = 20;
 
     }
 
