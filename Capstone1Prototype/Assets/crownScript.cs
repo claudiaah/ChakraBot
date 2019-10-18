@@ -6,7 +6,8 @@ public class crownScript : MonoBehaviour
 {
     public GameObject body;
     public GameObject infoScreen;
-    public Collider chakraCollider;
+    public Collider crownChakraCollider;
+    public GameObject flower; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class crownScript : MonoBehaviour
             RaycastHit hit;
             Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (chakraCollider.Raycast(r, out hit, 1000.0f))
+            if (crownChakraCollider.Raycast(r, out hit, 1000.0f))
             {
                 //AudioSource audioSource = GetComponent<AudioSource>();
                 //audioSource.Play();
@@ -36,8 +37,8 @@ public class crownScript : MonoBehaviour
 
         public void CloseInfoScreen()
         {
-            //AudioSource audioSource = GetComponent<AudioSource>();
-            //audioSource.Play();
-            infoScreen.SetActive(false);
+        //AudioSource audioSource = GetComponent<AudioSource>();
+        //audioSource.Play();
+        infoScreen.SetActive(false);
         }
     }
