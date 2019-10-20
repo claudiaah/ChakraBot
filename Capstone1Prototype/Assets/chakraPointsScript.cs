@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class crownScript : MonoBehaviour
+public class chakraPointsScript : MonoBehaviour
 {
     public GameObject body;
     public GameObject infoScreen;
-    public Collider crownChakraCollider;
+    public Collider ChakraCollider;
     public GameObject flower; 
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class crownScript : MonoBehaviour
             RaycastHit hit;
             Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (crownChakraCollider.Raycast(r, out hit, 1000.0f))
+            if (ChakraCollider.Raycast(r, out hit, 1000.0f))
             {
                 //AudioSource audioSource = GetComponent<AudioSource>();
                 //audioSource.Play();
