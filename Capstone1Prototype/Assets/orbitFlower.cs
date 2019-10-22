@@ -12,7 +12,7 @@ public class orbitFlower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 20;
+        speed = 15;
 
     }
 
