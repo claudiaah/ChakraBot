@@ -26,8 +26,8 @@ public class chakraPointsScript : MonoBehaviour
 
             if (ChakraCollider.Raycast(r, out hit, 1000.0f))
             {
-                //AudioSource audioSource = GetComponent<AudioSource>();
-                //audioSource.Play();
+                AudioSource audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
                 infoScreen.SetActive(true);
 
             }
@@ -38,8 +38,8 @@ public class chakraPointsScript : MonoBehaviour
 
         public void CloseInfoScreen()
         {
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.Play();
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
         infoScreen.SetActive(false);
         }
     }
