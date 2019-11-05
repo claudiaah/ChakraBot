@@ -5,7 +5,7 @@ using UnityEngine;
 public class orbitFlower : MonoBehaviour
 {
     public GameObject body;
-    public Collider crownChakraCollider;
+    public Collider redPointCollider;
     float speed;
 
 
