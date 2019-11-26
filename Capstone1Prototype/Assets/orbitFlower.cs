@@ -47,8 +47,9 @@ public class orbitFlower : MonoBehaviour
 
     public void CloseInfoScreen()
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Stop();
         questionScreen.SetActive(false);
+        //AudioSource audioSource = GetComponent<AudioSource>();
+        //audioSource.Stop();
+
     }
 }
