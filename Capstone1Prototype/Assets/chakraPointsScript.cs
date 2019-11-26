@@ -8,7 +8,6 @@ public class chakraPointsScript : MonoBehaviour
     public GameObject body;
     public GameObject infoScreen;
     public Collider ChakraCollider;
-    public GameObject flower; 
 
     // Start is called before the first frame update
     void Start()
