@@ -5,14 +5,15 @@ using UnityEngine;
 public class orbitFlower : MonoBehaviour
 {
     public GameObject body;
-    public Collider redPointCollider;
+    public GameObject questionScreen;
+    public Collider flowerCollider;
     float speed;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 15;
+        speed = 10;
 
     }
 
@@ -20,11 +21,34 @@ public class orbitFlower : MonoBehaviour
     void Update()
     {
         OrbitAround();
+
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit hit;
+            Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (flowerCollider.Raycast(r, out hit, 1000.0f))
+            {
+                questionScreen.SetActive(true);
+                AudioSource audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
+               
+            }
+
+
+        }
     }
 
     void OrbitAround()
     {
         transform.RotateAround(body.transform.position, Vector3.up, speed * Time.deltaTime);
 
+    }
+
+    public void CloseInfoScreen()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
+        questionScreen.SetActive(false);
     }
 }
