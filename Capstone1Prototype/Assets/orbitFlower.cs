@@ -32,8 +32,8 @@ public class orbitFlower : MonoBehaviour
             if (flowerCollider.Raycast(r, out hit, 1000.0f))
             {
                 questionScreen.SetActive(true);
-                //AudioSource audioSource = GetComponent<AudioSource>();
-                //audioSource.Play();
+                AudioSource audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
                
             }
 
@@ -50,8 +50,8 @@ public class orbitFlower : MonoBehaviour
     public void CloseInfoScreen()
     {
         questionScreen.SetActive(false);
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.Stop();
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
 
     }
 
@@ -59,26 +59,18 @@ public class orbitFlower : MonoBehaviour
     {
         questionScreen.SetActive(false);
         A1.SetActive(true);
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.Stop();
-
     }
 
     public void CloseA1()
     {
         A1.SetActive(false);
         questionScreen.SetActive(true);
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.Stop();
-
     }
 
     public void OpenA2()
     {
         questionScreen.SetActive(false);
         A2.SetActive(true);
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.Stop();
 
     }
 
@@ -86,9 +78,7 @@ public class orbitFlower : MonoBehaviour
     {
         A2.SetActive(false);
         questionScreen.SetActive(true);
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.Stop();
-
+   
     }
 
 
