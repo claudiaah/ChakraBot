@@ -10,11 +10,13 @@ public class orbitFlower : MonoBehaviour
     public GameObject A2;
     public Collider flowerCollider;
     float speed;
+    public GameObject uIObject;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        uIObject.SetActive(true);
         speed = 10;
 
     }
@@ -22,6 +24,7 @@ public class orbitFlower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         OrbitAround();
 
         if (Input.GetMouseButton(0))
@@ -39,7 +42,12 @@ public class orbitFlower : MonoBehaviour
 
 
         }
+
+        StartCoroutine("WaitForSec");
     }
+
+  
+
 
     void OrbitAround()
     {
@@ -79,6 +87,13 @@ public class orbitFlower : MonoBehaviour
         A2.SetActive(false);
         questionScreen.SetActive(true);
    
+    }
+
+    IEnumerator WaitForSec()
+    {
+        yield return new WaitForSeconds(7);
+        Destroy(uIObject);
+
     }
 
 
