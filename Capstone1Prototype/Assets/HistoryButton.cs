@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class HistoryButton : MonoBehaviour
 {
+
+    public GameObject historyPanel;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +19,18 @@ public class HistoryButton : MonoBehaviour
     {
         
     }
+
+
+    public void OpenHistory()
+    {
+        historyPanel.SetActive(true);
+
+    }
+
+    public void CloseInfoScreen()
+    {
+        historyPanel.SetActive(false);
+
+    }
+
 }
